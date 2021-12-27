@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="language" content="english">
+    <meta http-equiv="Permissions-Policy" content="interest-cohort=()" />
+    <meta name="version" content="{{site.ver}}" />
+
+    <title>
+        {% if page.title %}
+            {{ site.title }} - {{ page.title }}
+        {% else %}
+            {{ site.title }}
+        {% endif %}
+    </title>
+
+    <!-- Start Favicons -->
+
+
+    <!-- End Favicons -->
+
+    <link rel="canonical" href="{{ page.url | absolute_url }}" />
+
+    {% feed_meta %}
+
+    {% if page.title %}
+    <meta property="og:title" content="{{ page.title }}" />
+    <meta property="og:image:alt" content="{{ page.title }}" />
+    {% else %}
+    <meta property="og:title" content="{{ site.title }}" />
+    <meta property="og:image:alt" content="{{ site.title }}" />
+    {% endif %}
+    {% if page.subheading %}
+    <meta property="og:description" content="{{ page.subheading }}" />
+    <meta name="description" content="{{ page.subheading }}">
+    {% else %}
+    <meta property="og:description" content="{{ site.description }}" />
+    <meta name="description" content="{{ site.description }}">
+    {% endif %}
+    {% if page.image %}
+    <meta property="og:image" content="{{ page.image | absolute_url }}" />
+    {% else %}
+    <meta property="og:image" content="{{ '/images/shareimage-min.jpg' | absolute_url }}" />
+    {% endif %}
+    
+    {% if page.date %}
+    <meta property="article:published_time" content="{{page.date | date: '%Y-%m-%d'}}" />
+    <meta name="publish_date" property="og:publish_date" content="{{page.date | date: '%Y-%m-%d'}}">
+    <meta property="og:type" content="article" />
+    {% endif %}
+
+
+    <link rel="stylesheet" href="{{ 'css/styles.css' | relative_url }}?{{site.time | date: '%s' }}">
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id={{site.gtm-id}}"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', '{{site.gtm-id}}');
+    </script>
+</head>
+
+<body>
+    {{ content }}
+
+    <script src="{{ 'js/script.js' | relative_url }}?{{site.time | date: '%s' }}"></script>
+</body>
+</html>

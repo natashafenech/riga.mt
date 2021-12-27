@@ -1,0 +1,14 @@
+title: RIGA Design Studio
+description: RIGA Design Studio
+url: https://www.riga.mt
+email: info@riga.mt
+exclude: [".jekyll-cache", ".bundle", ".github", "Gemfile*", ".gitignore", "GitVersion.yml", ".git", "README.md", ".kodiak.toml", ".nojekyll", "LICENSE"]
+include: [".well-known"]
+ver: 0.0.0-local
+livereload: true
+host: 0.0.0.0
+permalink: pretty
+gtm-id: 
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
