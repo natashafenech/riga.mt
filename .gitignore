@@ -51,4 +51,3 @@ src/.sass-cache
 src/.jekyll-cache
 src/.jekyll-metadata
 src/vendor
-src/Gemfile.lock
