@@ -135,12 +135,22 @@ body {
     font-family: "Inter", sans-serif;
     background-image: url("/images/dot-grid.png");
     line-height: 1.7em;
-    font-weight: 500;
+    font-weight: 400;
+
+    h1 {
+        font-size: 2em;
+        font-weight: 300;
+    }
+    h2 {
+        font-size: 1.5em;
+        font-weight: 300;
+    }
+
     a {
         text-decoration: none;
         color: black;
 
-        &:hover{
+        &:hover {
             text-decoration: underline;
         }
     }
@@ -156,10 +166,18 @@ body {
         align-items: center;
         justify-content: center;
         flex-direction: column;
-
         max-width: 1440px;
         margin: 0 auto;
         text-align: center;
+
+        .header {
+            flex-grow: 0;
+            background: black;
+            width: 100%;
+            color: white;
+            font-weight: 300;
+            font-size: 3em;
+        }
 
         .content {
             flex-grow: 1;
@@ -172,13 +190,25 @@ body {
                 max-width: 100%;
                 padding: 20px;
             }
+
+            .float {
+                display: inline-block;
+                display: flex;
+                text-align: center;
+                justify-content: center;
+                flex-direction: column;
+            }
         }
 
         .footer {
             flex-grow: 0;
+            background: rgba(0, 0, 0, 0.1);
+            width: 100%;
+            color: black;
+            padding: 25px 0;
 
-            .inner {
-                padding: 20px;
+            a {
+                color: black;
             }
         }
     }
