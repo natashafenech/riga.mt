@@ -31,11 +31,11 @@ html .main .header, body .main .header { flex-grow: 0; background: black; width:
 
 html .main .content, body .main .content { flex-grow: 1; display: flex; text-align: center; justify-content: center; }
 
-html .main .content img, body .main .content img { width: 500px; max-width: 100%; padding: 20px; }
+html .main .content img, body .main .content img { width: 500px; max-width: 80%; padding: 20px 0; margin: 0 auto; }
 
 html .main .content .float, body .main .content .float { display: inline-block; display: flex; text-align: center; justify-content: center; flex-direction: column; }
 
-html .main .footer, body .main .footer { flex-grow: 0; background: rgba(0, 0, 0, 0.1); width: 100%; color: black; padding: 25px 0; }
+html .main .footer, body .main .footer { flex-grow: 0; width: 100%; color: black; padding: 25px 0; }
 
 html .main .footer a, body .main .footer a { color: black; }
 
