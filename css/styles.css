@@ -13,7 +13,11 @@ blockquote:before, blockquote:after, q:before, q:after { content: ""; content: n
 
 table { border-collapse: collapse; border-spacing: 0; }
 
-html, body { background: black; color: black; height: 100%; height: 100%; font-family: "Inter", sans-serif; background-image: url("/images/dot-grid.png"); line-height: 1.7em; font-weight: 500; }
+html, body { background: black; color: black; height: 100%; height: 100%; font-family: "Inter", sans-serif; background-image: url("/images/dot-grid.png"); line-height: 1.7em; font-weight: 400; }
+
+html h1, body h1 { font-size: 2em; font-weight: 300; }
+
+html h2, body h2 { font-size: 1.5em; font-weight: 300; }
 
 html a, body a { text-decoration: none; color: black; }
 
@@ -23,12 +27,16 @@ html strong, body strong { font-weight: bold; }
 
 html .main, body .main { width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; flex-direction: column; max-width: 1440px; margin: 0 auto; text-align: center; }
 
+html .main .header, body .main .header { flex-grow: 0; background: black; width: 100%; color: white; font-weight: 300; font-size: 3em; }
+
 html .main .content, body .main .content { flex-grow: 1; display: flex; text-align: center; justify-content: center; }
 
 html .main .content img, body .main .content img { width: 500px; max-width: 100%; padding: 20px; }
 
-html .main .footer, body .main .footer { flex-grow: 0; }
+html .main .content .float, body .main .content .float { display: inline-block; display: flex; text-align: center; justify-content: center; flex-direction: column; }
 
-html .main .footer .inner, body .main .footer .inner { padding: 20px; }
+html .main .footer, body .main .footer { flex-grow: 0; background: rgba(0, 0, 0, 0.1); width: 100%; color: black; padding: 25px 0; }
+
+html .main .footer a, body .main .footer a { color: black; }
 
 /*# sourceMappingURL=styles.css.map */
